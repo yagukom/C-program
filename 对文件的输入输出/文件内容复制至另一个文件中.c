@@ -1,7 +1,13 @@
 #include "stdio.h"
 #include "stdlib.h"
 #pragma warning(disable : 4996)//VS2019环境设置，防止fopen报错
-
+/*
+* 编辑时间：2020-11-23 14:37
+* 参考内容：C程序设计（第五版）谭浩强 P341 例10.2
+* fgetc(fp) 	从fp指向的文件读入一个字符，输出失败则返回文件结束标志EOF(即-1)。
+* fputc(ch,fp) 	把字符ch写到文件指针变量fp所指向的文件中，输出失败则返回文件结束标志EOF(即-1)。
+* feof(fp)	可以检测文件尾标志是否被读取过。
+*/
 int main() 
 {
 	FILE * readInFilePoint, * writeOutFilePoint;
@@ -10,7 +16,7 @@ int main()
 	scanf("%s",inFileName);
 	printf("输入输出文件的名字\n");
 	scanf("%s",outFileName);
-	if ((readInFilePoint = fopen(inFileName, "r")) == NULL)
+	if ((readInFilePoint = fopen(inFileName, "r")) == NULL)//读的对象要为"r"才行
 	{
 		printf("无法打开此文件\n");
 		exit(0);
