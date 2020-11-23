@@ -28,7 +28,7 @@ int main()
 		exit(0);
 	}
 	naka = fgetc(readInFilePoint);
-	while (!feof(readInFilePoint))
+	while (!feof(readInFilePoint))//可以将此处改为 while(naka!=-1) 或 while(naka!=EOF)
 	{
 		fputc(naka, writeOutFilePoint);
 		putchar(naka);
