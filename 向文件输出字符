@@ -1,0 +1,20 @@
+#include "stdio.h"
+#include "stdlib.h"
+#pragma warning(disable : 4996)
+
+int main() 
+{
+	FILE *targetFilePoint;
+	char fileName[]="hanhanda.txt";
+	char inputContent;
+	targetFilePoint = fopen(fileName,"w");
+	printf("请输入准备储存到磁盘里的字符串，以#号结束");
+	inputContent = getchar();
+	while (inputContent!='#')
+	{
+		fputc(inputContent, targetFilePoint);
+		putchar(inputContent);
+		inputContent = getchar();
+	}
+	fclose(targetFilePoint); 
+}
