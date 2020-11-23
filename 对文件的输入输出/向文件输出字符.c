@@ -1,7 +1,13 @@
 #include "stdio.h"
 #include "stdlib.h"
-#pragma warning(disable : 4996)//VS2019环境设置
-
+#pragma warning(disable : 4996)//VS2019环境设置，防止fopen报错
+/*
+* 编辑时间：2020-11-23 13:58
+* 函数说明：
+* fgetc(fp) 	从fp指向的文件读入一个字符，输出失败则返回文件结束标志EOF(即-1)。
+* fputc(ch,fp) 	把字符ch写到文件指针变量fp所指向的文件中，输出失败则返回文件结束标志EOF(即-1)。
+* getchar() 	每次只能接收一个字符。
+*/
 int main() 
 {
 	FILE *targetFilePoint;//定义文件指针
