@@ -12,7 +12,8 @@
 int main() 
 {
 	FILE *targetFilePoint;//定义文件指针
-	char fileName[]="本程序生成的.txt";
+	//char fileName[]="本程序生成的.txt";//此处会生成在与此C文件夹相同的目录下
+	char fileName[] = "D:\\RUA\\本程序生成的.txt";//注意先要在D盘下生成RUA文件夹才行
 	char inputContent;
 	targetFilePoint = fopen(fileName,"w");//使文件指针指向 本程序生成的.txt 文件
 	printf("请输入准备储存到磁盘里的字符串，以#号结束");
