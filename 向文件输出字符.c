@@ -12,7 +12,7 @@ int main()
 	inputContent = getchar();
 	while (inputContent!='#')
 	{
-		fputc(inputContent, targetFilePoint);
+		fputc(inputContent, targetFilePoint);//向磁盘文件输出一个字符
 		putchar(inputContent);//将刚才输入的字符输出到电脑屏幕上
 		inputContent = getchar();
 	}
