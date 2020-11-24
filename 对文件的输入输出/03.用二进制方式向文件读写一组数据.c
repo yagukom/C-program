@@ -7,8 +7,14 @@
 * 今天部门里楠姐被老板气走啦，怀念一下，貌似是2020-4-21来的，比我早5个月，昨天她做了最后的任务，把部门之前的报销全清了。
 * 参考书籍：《C程序设计》第五版 谭浩强 P345~P348 例10.4
 * 函数说明：
-	fread(buffer,size,count,fp);其中buffer为数据源的地址，此处即为一个结构体变量组成的数组地址。
-	fwrite(buffer,size,count,fp);
+	fread(buffer,size,count,fp);
+		其中,
+		buffer:为数据源的地址。	此处即为一个结构体变量组成的数组里 各结构体变量的地址，即 &Hampback_LabTeam[数组成员编号] 或 Hampback_LabTeam+数组成员编号。
+		size:为要读写的字数。	此处为结构体Human_info的结构体长度，使用sizeof(struct Human_info)来测量Human_info结构体的长度。
+		count:为要读写的数据项，每个数据项长度为size。	此处设置为 1 ，即每次读或写 1 个Human_info结构体的 大小。
+		fp:FILE类型的指针。	此处fp指针指向“座头鲸研发部人员清单.dat”文件。
+		总结：即 将要传输的数据视为“包(cell)”，则每个包对应一个 Human_info结构体，数据源为 Hampback_LabTeam[]数组，该数据源由 Human_info结构体 定义。
+	fwrite(buffer,size,count,fp);同上。
 	fopen("文件名","使用文件的方式");其中wb为建立二进制文件；rb为读取一个二进制文件。
 	scanf("格式控制"，各种地址);其中&为取地址符。
 */
