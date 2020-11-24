@@ -42,7 +42,7 @@ void save_Hampback_LabTeam() {
 		return;
 	}
 	for (int i = 0; i < date; i++) {
-		if (fwrite(&Hampback_LabTeam[i], sizeof(struct Human_info), data_count, filePoint) != data_count)
+		if (fwrite(&Hampback_LabTeam[i], sizeof(struct Human_info), data_count, filePoint) != data_count)//fwrite()和fread()是有返回值的，即若执行成功，则返回它们的第三个参数count的值。
 		{
 			printf("file write error\n");
 		}
