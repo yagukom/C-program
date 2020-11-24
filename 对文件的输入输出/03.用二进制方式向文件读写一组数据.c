@@ -2,16 +2,26 @@
 #include "stdlib.h"
 #pragma warning(disable : 4996)//VS2019环境设置，防止fopen报错
 
+/*
+* 编辑时间：2020-11-24 14:54 周二 小雨
+* 今天部门里楠姐被老板气走啦，怀念一下，貌似是2020-4-21来的，比我早5个月，昨天她做了最后的任务，把部门之前的报销全清了。
+* 参考书籍：《C程序设计》第五版 谭浩强 P345~P348 例10.4
+* 函数说明：
+	fread(buffer,size,count,fp);
+	fwrite(buffer,size,count,fp);
+	fopen("文件名","使用文件的方式");其中wb为建立二进制文件；rb为读取一个二进制文件。
+	scanf("格式控制"，各种地址);其中&为取地址符。
+*/
 #define date_since_20201124_member 17-1
-#define test 2
+//#define test 2 //最初测试这个demo时候用的
 
-#define exit_mode 0
+#define exit_mode 0 //这三个模式用于在主循环中 使用 对应的模式
 #define write_mode 1
 #define read_mode 2
 
 #define data_count 1//对应fwrite(buffer,size,count,fp)中的count
 
-#define date test //以后每次只需要修改此处的宏定义中 date_since_xxxx 选项即可
+#define date date_since_20201124_member //以后每次只需要修改此处的宏定义中 date_since_xxxx 选项即可
 struct Human_info {
 	char name[15];
 	//int birthday_year;
