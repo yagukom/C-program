@@ -60,7 +60,8 @@ void read_Hampback_LabTeam() {
 	}
 	for (int i = 0; i < date; i++) {
 		fread(&Hampback_LabTeam[i], sizeof(struct Human_info), data_count, filePoint);
-		printf("%-10s %-4s %4d %4d \n", Hampback_LabTeam[i].name, Hampback_LabTeam[i].sex, Hampback_LabTeam[i].worked_year, Hampback_LabTeam[i].worked_month);
+		//fread(Hampback_LabTeam+i, sizeof(struct Human_info), data_count, filePoint);这一行效果是和上一行是一样的。
+		printf("[%2d] %-10s %-4s %4d %4d \n", i+1,Hampback_LabTeam[i].name, Hampback_LabTeam[i].sex, Hampback_LabTeam[i].worked_year, Hampback_LabTeam[i].worked_month);
 	}
 	fclose(filePoint);
 }
