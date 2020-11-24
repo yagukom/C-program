@@ -7,7 +7,7 @@
 * 今天部门里楠姐被老板气走啦，怀念一下，貌似是2020-4-21来的，比我早5个月，昨天她做了最后的任务，把部门之前的报销全清了。
 * 参考书籍：《C程序设计》第五版 谭浩强 P345~P348 例10.4
 * 函数说明：
-	fread(buffer,size,count,fp);
+	fread(buffer,size,count,fp);其中buffer为数据源的地址，此处即为一个结构体变量组成的数组地址。
 	fwrite(buffer,size,count,fp);
 	fopen("文件名","使用文件的方式");其中wb为建立二进制文件；rb为读取一个二进制文件。
 	scanf("格式控制"，各种地址);其中&为取地址符。
@@ -32,7 +32,7 @@ struct Human_info {
 	int worked_month;
 };
 
-struct Human_info Hampback_LabTeam[date];
+struct Human_info Hampback_LabTeam[date];//定义一个向文件写入的数据结构体变量，用于储存想要写入或者读取的文件数据对象。
 
 void save_Hampback_LabTeam() {
 	FILE* filePoint;
@@ -42,7 +42,8 @@ void save_Hampback_LabTeam() {
 		return;
 	}
 	for (int i = 0; i < date; i++) {
-		if (fwrite(&Hampback_LabTeam[i], sizeof(struct Human_info), data_count, filePoint) != data_count)//fwrite()和fread()是有返回值的，即若执行成功，则返回它们的第三个参数count的值。
+		//fwrite()和fread()都是有返回值的，即若执行成功，则返回它们的第三个参数count的值。
+		if (fwrite(&Hampback_LabTeam[i], sizeof(struct Human_info), data_count, filePoint) != data_count)
 		{
 			printf("file write error\n");
 		}
