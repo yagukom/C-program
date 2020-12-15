@@ -24,9 +24,15 @@
 * 	右边的2年老员工倪工因为加薪失败也请假散心去了。
 * 修改内容：1.新增#define date_since_20201211_member 17-1-1
 *	   2.替换#define date 右侧的 date_since_20201211_member
+----------------------------------------------------------------------------------------------------------------------------------------------------
+* 修改时间:2020-12-15 08:38 周二 晴
+* 事迹：昨天结构工程师竺工正式离职了（2020-6-24来的），今年上半年来的7个人里，已经走了4个了，另外一个邵工（IOS工程师2020-5-25）在我来之前转到了产品部，但在2020-12-11的时候也走了。
+* 修改内容：1.新增#define date_since_20201215_member 17-1-1-1
+	   2.替换#define date 右侧的 date_since_20201215_member
 */
 #define date_since_20201124_member 17-1
 #define date_since_20201211_member 17-1-1
+#define date_since_20201215_member 17-1-1-1
 //#define test 2 //最初测试这个demo时候用的
 
 #define exit_mode 0 //这三个模式用于在主循环中 使用 对应的模式
@@ -35,7 +41,7 @@
 
 #define data_count 1//对应fwrite(buffer,size,count,fp)中的count
 
-#define date date_since_20201211_member //以后每次只需要修改此处的宏定义中 date_since_xxxx 选项即可
+#define date date_since_20201215_member //以后每次只需要修改此处的宏定义中 date_since_xxxx 选项即可
 struct Human_info {
 	char name[15];
 	//int birthday_year;
