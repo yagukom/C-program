@@ -6,6 +6,7 @@ void main() {
 	int address0 = &p2 - &p1;
 	printf("p2=%d\n", p2);
 	*p1 += *p2++;//即*(p2++)，此时指针变量p2内部储存的地址值（而不是指针变量p2自身的地址值） 将自增一个int指针的量，即+4.
+	//或者VS打断点看看
 	int address = &p2 - &p1;
 	printf("%d %d\n", address0,address);//[k1]这里检测出来的其实是指针变量p1,p2自身的地址值，所以他们的差值是不会变的。
 	printf("p1指针指向的数组数据=%d，\np2指针指向的数组数据=%d\n", *p1, *p2);
